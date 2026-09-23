@@ -12,7 +12,7 @@
 //     console.log("the array is not palindrom");
 //   }
 // }
-// findPalindrom([1, 2, 3, 2]);
+// findPalindrom([1, 2, 3, 2])
 
 // const findPalindromOfNum = (str) => {
 //   let original = str;
