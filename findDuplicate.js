@@ -36,36 +36,36 @@
 // }
 // findFrequency("helloworld");
 
-// let arr = [4, 2, 7, 4, 9, 2, 5, 7];
-// let result = "";
-// let map = new Map();
-
-// for (let num of arr) {
-//   if (map.has(num)) {
-//     console.log("Duplicate:", num);
-//     result += "x";
-//   } else {
-//     map.set(num, 1);
-//     result += num;
-//   }
-//   console.log(result);
-// }
-
 let arr = [4, 2, 7, 4, 9, 2, 5, 7];
+let result = "";
+let map = new Map();
 
-arr.sort((a, b) => a - b);
-
-let left = 0;
-let right = 1;
-
-while (right < arr.length) {
-  if (arr[left] === arr[right]) {
-    console.log("Duplicate:", arr[right]);
-
-    // Move right past this duplicate
-    right++;
+for (let num of arr) {
+  if (map.has(num)) {
+    console.log("Duplicate:", num);
+    result += "x";
   } else {
-    left = right;
-    right++;
+    map.set(num, 1);
+    result += num;
   }
+  console.log(result);
 }
+
+// let arr = [4, 2, 7, 4, 9, 2, 5, 7];
+
+// arr.sort((a, b) => a - b);
+
+// let left = 0;
+// let right = 1;
+
+// while (right < arr.length) {
+//   if (arr[left] === arr[right]) {
+//     console.log("Duplicate:", arr[right]);
+
+//     // Move right past this duplicate
+//     right++;
+//   } else {
+//     left = right;
+//     right++;
+//   }
+// }
