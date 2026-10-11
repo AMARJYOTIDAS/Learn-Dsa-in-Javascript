@@ -9,10 +9,17 @@
 // }
 
 let n = 5;
-for(let i = 1; i <= n; i++){
-  let row = '';
-  if(i == )
-  for(let j = 1; j <= n; j++){
-    let row = n;
+
+for (let i = 1; i <= n; i++) {
+  let pattern = "";
+
+  if (i === n) {
+    for (let j = 1; j <= n; j++) {
+      pattern += "* ";
+    }
+  } else {
+    pattern = "*";
   }
+
+  console.log(pattern);
 }
