@@ -35,18 +35,38 @@
 
 // findPalindromOfNum(12321);
 
-const findPalindromOfStr = (str) => {
-  let left = 0;
-  let right = str.length - 1;
+// const findPalindromOfStr = (str) => {
+//   let left = 0;
+//   let right = str.length - 1;
 
-  while (left < right) {
-    if (str[left] != str[right]) {
-      return false;
-    }
-    left++;
-    right--;
+//   while (left < right) {
+//     if (str[left] != str[right]) {
+//       return false;
+//     }
+//     left++;
+//     right--;
+//   }
+//   return true;
+// };
+// console.log(findPalindromOfStr("mamdmam"));
+// console.log(findPalindromOfStr("hari"));
+
+var isPalindrome = function (x) {
+  var reverse = 0;
+  var copy = x;
+
+  //The loop break when the copy of original number becomes zero
+  //Also negative number cannot be a palindrome
+  while (copy > 0) {
+    const digit = copy % 10;
+    reverse = reverse * 10 + digit;
+    copy = ~~(copy / 10);
   }
-  return true;
+
+  return reverse == x;
 };
-console.log(findPalindromOfStr("mamdmam"));
-console.log(findPalindromOfStr("hari"));
+
+console.log(isPalindrome(-123));
+console.log(isPalindrome(123));
+console.log(isPalindrome(121));
+console.log(isPalindrome("12321"));
