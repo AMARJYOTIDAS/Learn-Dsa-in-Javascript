@@ -1,18 +1,17 @@
-let n = 5;
+function invertedL(n) {
+  for (let i = 1; i <= n; i++) {
+    let row = "";
 
-for (let i = 1; i <= n; i++) {
-  let pattern = "";
-
-  if (i === 1) {
     for (let j = 1; j <= n; j++) {
-      pattern += "* ";
+      if (i === 1 || j === 1) {
+        row += "* ";
+      } else {
+        row += "  ";
+      }
     }
-  } else {
-    for (let j = 1; j < n; j++) {
-      pattern += "  ";
-    }
-    pattern += "*";
-  }
 
-  console.log(pattern);
+    console.log(row);
+  }
 }
+
+invertedL(5);
