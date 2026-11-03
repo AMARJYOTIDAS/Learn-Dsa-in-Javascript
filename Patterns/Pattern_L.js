@@ -26,13 +26,16 @@
 let num = 5;
 for (let i = 1; i <= num; i++) {
   let row = "";
+  let column = "";
   for (let j = 1; j <= i; j++) {
-    if ((j = 1 || i == 5)) {
+    if (i == j) {
       row = "*";
+      column = "*";
     } else {
-      row = "";
+      row = " ";
       console.log(row);
     }
     console.log(row);
+    console.log(column);
   }
 }
