@@ -51,19 +51,35 @@
 // console.log(findPalindromOfStr("mamdmam"));
 // console.log(findPalindromOfStr("hari"));
 
-var isPalindrome = function (x) {
-  var reverse = 0;
-  var copy = x;
+// var isPalindrome = function (x) {
+//   var reverse = 0;
+//   var copy = x;
 
-  //The loop break when the copy of original number becomes zero
-  //Also negative number cannot be a palindrome
-  while (copy > 0) {
-    const digit = copy % 10;
-    reverse = reverse * 10 + digit;
-    copy = ~~(copy / 10);
+//   //The loop break when the copy of original number becomes zero
+//   //Also negative number cannot be a palindrome
+//   while (copy > 0) {
+//     const digit = copy % 10;
+//     reverse = reverse * 10 + digit;
+//     copy = ~~(copy / 10);
+//   }
+
+//   return reverse == x;
+// };
+
+var isPalindrome = function (x) {
+  if (x < 0) {
+    return false;
   }
 
-  return reverse == x;
+  let originalNum = x;
+  let reverse = 0;
+  while (x > 0) {
+    let temp = x % 10;
+    reverse = reverse * 10 + temp;
+    x = Math.floor(x / 10);
+  }
+
+  return originalNum === reverse;
 };
 
 console.log(isPalindrome(-123));
